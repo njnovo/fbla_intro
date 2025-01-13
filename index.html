@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Game Title</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    height: {
+                        'screen-80': '80vh'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-white font-bold text-xl">Game Title</a>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2">Home</a>
+                        <a href="features.html" class="text-gray-300 hover:text-white px-3 py-2">Features</a>
+                        <a href="play.html" class="text-gray-300 hover:text-white px-3 py-2">Play</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-400 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen-80 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black opacity-70 z-0">
+            <img src="https://placehold.co/1920x1080" class="w-full h-full object-cover mix-blend-overlay" alt="Hero background">
+        </div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-6xl font-bold mb-6">Welcome to our Choose Your Own Adventure Game</h1>
+            <p class="text-xl mb-8">Embark on an incredible journey in this amazing gaming experience</p>
+            <a href="play.html" class="bg-blue-900 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+                Play Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">Game Features</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-4">Amazing Gameplay</h3>
+                    <p class="text-gray-600">Experience tailored responses to all your choices.</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-4">JavaScript Based Engine</h3>
+                    <p class="text-gray-600">Have fun while your game loads instantly with our efficient engine.</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-4">ChatGPT Based Responses</h3>
+                    <p class="text-gray-600">Receive responses based on your choices from the best AI in the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="text-center text-white">
+            <p>&copy; 2024 Game Title. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
