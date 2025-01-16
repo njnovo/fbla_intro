@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Game Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Pyodide scripts -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-blue-600 text-white py-4">
+            <div class="container mx-auto px-4">
+                <h1 class="text-2xl font-bold">Python Game Engine</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div id="output" class="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm h-40 overflow-auto">
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
