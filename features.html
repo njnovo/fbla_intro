@@ -284,16 +284,7 @@
         const reportContainer = document.getElementById('report-container');
         if (!reportContainer) return;
     
-        const reportHTML = `
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold mb-4">Game Progress Report</h2>
-                <p>Completion Rate: ${report.completionRate}%</p>
-                <p>Current Score: ${report.score}</p>
-                <p>Level Reached: ${report.level}</p>
-                <p>Choices Made: ${report.playerChoices.length}</p>
-                <p>Generated: ${new Date(report.timestamp).toLocaleString()}</p>
-            </div>
-        `;
+        const reportHTML = code not shown;
     
         reportContainer.innerHTML = reportHTML;
     }
