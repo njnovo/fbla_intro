@@ -67,7 +67,7 @@ async function saveGame(gameState) {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'X-Master-Key': '$2b$10$zSL1Sz0T.cqwEbcO0uUYduVUSC8hiMelv0OlDmZPtIcleAL9wl65y'
+                'X-Master-Key': process.env.JSON_BIN_KEY
             },
             body: JSON.stringify(saveData)
         });
@@ -86,9 +86,9 @@ async function saveGame(gameState) {
 async function loadGame(gameCode) {
     try {
         // Assuming you're using JSONBin.io - replace with your API key and bin ID
-        const response = await fetch('https://api.jsonbin.io/v3/b/YOUR_BIN_ID', {
+        const response = await fetch('https://api.jsonbin.io/v3/b/67917dbead19ca34f8f2d6eb', {
             headers: {
-                'X-Master-Key': 'YOUR_API_KEY'
+                'X-Master-Key': process.env.JSON_BIN_KEY
             }
         });
         

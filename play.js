@@ -2,7 +2,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 function log(message) {
-    out = document.getElementById('output');
+    const out = document.getElementById('output');
+    if (!out) {
+        console.log(message); // Fallback to console if element not found
+        return;
+    }
     out.innerHTML += message + "\n";
 }
 
