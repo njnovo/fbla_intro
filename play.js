@@ -113,3 +113,35 @@ async function adventureGame() {
 
 // Start the game when the page loads
 document.addEventListener('DOMContentLoaded', adventureGame);
+
+// Update the save function to only store chat messages
+export const saveGame = async (gameState) => {
+    const chatHistory = gameState.chatHistory.map(msg => ({
+        role: msg.role,
+        content: msg.content
+    }));
+
+    const jsonBinData = {
+        chatHistory,
+        lastSaveTime: new Date().toISOString()
+    };
+
+    // ... rest of save function ...
+}
+
+// Update the load function to properly reconstruct context
+export const loadGame = async (binId) => {
+    // ... existing bin fetch code ...
+
+    // Reconstruct the full context when loading
+    const systemMessage = createSystemMessage();
+    const fullChatHistory = [
+        systemMessage,
+        ...data.chatHistory
+    ];
+
+    return {
+        chatHistory: fullChatHistory,
+        // ... other state properties ...
+    };
+}
