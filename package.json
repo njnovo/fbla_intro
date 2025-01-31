@@ -1,8 +1,12 @@
 {
-  "dependencies": {
-    "dotenv-webpack": "^8.1.0",
-    "vite": "^6.0.11",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^6.0.1"
-  }
+  "name": "fbla_intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
