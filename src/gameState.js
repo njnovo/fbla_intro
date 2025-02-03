@@ -5,7 +5,7 @@ export class GameState {
         this.level = level; 
         this.jsonBinUrl = root + binId + "/latest";
         this.jsonBinUrlPut = root + binId;
-        this.jsonBinKey = import.meta.env.VITE_JSON_BIN_KEY;
+        this.jsonBinKey = process.env.VITE_JSON_BIN_KEY;
         this.context = [];
         if(gc == null) {
             this.genGameCode();
