@@ -40,13 +40,13 @@
         <main class="container mx-auto px-4 py-8">
             <!-- Game Code Section -->
             <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                <h2 class="text-2xl font-bold mb-4">Load Saved Game</h2>
+                <h2 class="text-2xl font-bold mb-4">Load Saved Game (If You Have An Uncompleted Game)</h2>
                 <div class="flex gap-2">
                     <input type="text" id="gameCodeInput" class="flex-1 border rounded p-2" placeholder="Enter your game code...">
                     <button id="loadGameButton" class="bg-gray-800 hover:bg-blue-800 text-white px-4 py-2 rounded">Load Game</button>
                 </div>
                 <div class="mt-4">
-                    <p class="text-sm text-gray-600 mb-2">Your Game Code:</p>
+                    <p class="text-sm text-gray-600 mb-2">Your Game Code (Save This To Reload Your Game If You Don't Finish):</p>
                     <p id="gameCodeText" class="font-mono bg-gray-100 p-2 rounded"></p>
                 </div>
             </div>
@@ -67,6 +67,9 @@
                 <div class="prose max-w-none">
                     <pre id="reportContent" class="whitespace-pre-wrap bg-gray-100 p-4 rounded-lg font-mono text-sm leading-relaxed"></pre>
                 </div>
+                <button id="restartButton" class="mt-4 bg-gray-800 hover:bg-blue-800 text-white px-4 py-2 rounded">
+                    Restart Game
+                </button>
             </div>
         </main>
     </div>

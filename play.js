@@ -56,13 +56,14 @@ async function adventureGame() {
     const gameCodeText = document.getElementById('gameCodeText');
     const gameCodeInput = document.getElementById('gameCodeInput');
     const reportText = document.getElementById('reportContent');
+    const restartButton = document.getElementById('restartButton');
     
     // Initialize gameState with null game code
-    let gameState = new GameState(0, null);
+    let gameState = new GameState(null, null);
     
     log("Welcome to the Adventure! Type 'stop' at any time to leave the game.");
-    log("\nHow would you like to theme your choose-your-own-adventure game?");
-
+    log("\nHow would you like to theme your choose-your-own-adventure game? An example could be, beach themed, jungle themed, or sailing themed.");
+        
     let gameActive = true;
     let theme = null;
     let messagesUserSide = [];
@@ -71,8 +72,8 @@ async function adventureGame() {
     loadGameButton.addEventListener('click', async () => {
         const gameCode = gameCodeInput.value.trim();
         if (gameCode) {
-            // Initialize with level 0 when loading a game
-            gameState = new GameState(0, gameCode);
+            // Remove the hardcoded level 0
+            gameState = new GameState(null, gameCode);
             log(`\nLoading game with code: ${gameCode}`);
             gameCodeText.textContent = gameCode;
             
@@ -119,7 +120,7 @@ async function adventureGame() {
             log("\nThank you for playing!");
             gameActive = false;
             reportText.textContent = gameState.generateReport();
-            // Remove the game from JsonBin when it ends
+            document.getElementById('gameReport').classList.remove('hidden');
             await gameState.removeFromJsonBin();
             return;
         }
@@ -158,10 +159,9 @@ async function adventureGame() {
                                          `🤖 AI: ${choice[0]}\n` +
                                          `👤 You: ${choice[1]}`
                                      ).join('\n');
-                document.getElementById('gameReport').classList.remove('hidden'); // Show the report
+                document.getElementById('gameReport').classList.remove('hidden');
                 reportText.textContent = reportContent;
                 gameActive = false;
-                // Remove the game from JsonBin when it ends
                 await gameState.removeFromJsonBin();
                 return;
             }
@@ -179,6 +179,29 @@ async function adventureGame() {
         if (e.key === 'Enter') {
             submitButton.click();
         }
+    });
+
+    // Add restart button handler
+    restartButton.addEventListener('click', () => {
+        // Clear the game report
+        document.getElementById('gameReport').classList.add('hidden');
+        reportText.textContent = '';
+        
+        // Clear the game code display
+        gameCodeText.textContent = '';
+        
+        // Clear the output
+        document.getElementById('output').innerHTML = '';
+        
+        // Reset game state
+        gameState = new GameState(null, null);
+        gameActive = true;
+        theme = null;
+        
+        // Start new game
+        log("Welcome to the Adventure! Type 'stop' at any time to leave the game.");
+        log("\nHow would you like to theme your choose-your-own-adventure game? An example could be, beach themed, jungle themed, or sailing themed.");
+        adventureGame();
     });
 }
 

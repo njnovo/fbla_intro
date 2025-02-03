@@ -2,7 +2,7 @@ export class GameState {
     constructor(level, gc) {
         let root = "https://api.jsonbin.io/v3/b/"
         let binId = "67a019cde41b4d34e4830729"
-        this.level = level; 
+        this.level = level || 0;
         this.jsonBinUrl = root + binId + "/latest";
         this.jsonBinUrlPut = root + binId;
         this.jsonBinKey = import.meta.env.VITE_JSON_BIN_KEY;
