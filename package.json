@@ -4,9 +4,7 @@
   "description": "Chat_GPT based intro to programming fbla",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "niels",
