@@ -1,18 +1,26 @@
 {
   "name": "fbla_intro",
   "version": "1.0.0",
-  "description": "",
+  "description": "Chat_GPT based intro to programming fbla",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite"
   },
   "keywords": [],
-  "author": "",
+  "author": "niels",
   "license": "ISC",
   "devDependencies": {
     "vite": "^5.3.3"
   },
-  "scripts": {
-    "dev": "vite"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njnovo/fbla_intro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/njnovo/fbla_intro/issues"
+  },
+  "homepage": "https://github.com/njnovo/fbla_intro#readme",
+  "dependencies": {
+    "process": "^0.11.10"
   }
 }

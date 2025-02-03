@@ -16,7 +16,7 @@ function log(message) {
 
 async function getAIResponse(messages) {
     // Don't use process.env directly in browser
-    const OPENAI_API_KEY = process.env.VITE_OPENAI_API_KEY; // If using Vite
+    const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY; // If using Vite
     // OR
     // const OPENAI_API_KEY = window.env.OPENAI_API_KEY; // If using a config file
     
